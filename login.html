@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Daily Sleep Tracker
+    </title>
+  </head>
+  
+  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB8tSdSCel4l_FunWfeiKSwLpZHH9j1PUE",
+    authDomain: "daily-sleep-tracker.firebaseapp.com",
+    projectId: "daily-sleep-tracker",
+    storageBucket: "daily-sleep-tracker.appspot.com",
+    messagingSenderId: "978998870546",
+    appId: "1:978998870546:web:e92c05ea76ff9004770ecb",
+    measurementId: "G-4TXV1GSP7K"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+  
+  
+  <script>
+    firebase.auth().onAuthStateChanged(function(user){
+    if (user){
+    document.body.innerHTML = '<h1> Congrats' + user.displayName + ', you are done!</h1> <h2> now get back to what you love building</h2> <h2></h2>}
+    }
+  </script>
+          
+        
