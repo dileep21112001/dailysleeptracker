@@ -10,10 +10,6 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-
 <script>
   var firebaseConfig = {
     apiKey: "AIzaSyB8tSdSCel4l_FunWfeiKSwLpZHH9j1PUE",
@@ -31,8 +27,12 @@
   <script>
     firebase.auth().onAuthStateChanged(function(user){
     if (user){
-    document.body.innerHTML = '<h1> Congrats' + user.displayName + ', you are done!</h1> <h2> now get back to what you love building</h2> <h2></h2>}
-    }
+    document.body.innerHTML = '<h1> Congrats' + user.displayName + ', you are done!</h1> <h2> now get back to what you love building</h2> <h2>need to verify your email address or reset your password? Firebase can handle all of that for you using the email your provide: '+ user.email +. '</h2>';}
+      else{
+      console.log("no user signedin"):
+      }
+    });
+    <h1>congrats you are almost done</h1>
   </script>
           
         
